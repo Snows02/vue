@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="toggleModal">Show Modal</button>
+        <modal
+            v-show="showModal"
+            v-on:close-modal="toggleModal"
+            v-bind:title="title"
+        >
+            <template v-slot:body> 
+                Acá esta el body del modal :v
+            </template>
+        </modal>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
